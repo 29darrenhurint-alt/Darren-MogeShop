@@ -1,0 +1,278 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #f1f1f1;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: linear-gradient(90deg, #111, #1a1a1a);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid #c49b08;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+}
+
+.logo h1 {
+  color: #c49b08;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #c49b08;
+}
+
+.cart-btn {
+  background: #b80000;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cart-btn:hover {
+  background: #ff1e1e;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url("images/bg.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 80px;
+  color: #fff;
+}
+
+.hero-content h2 {
+  font-size: 2.8em;
+}
+
+.hero-content span {
+  color: #c49b08;
+}
+
+.btn-primary {
+  background: #c49b08;
+  color: #000;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #ff1e1e;
+  color: #fff;
+}
+
+/* SECTION */
+section {
+  padding: 100px 60px;
+}
+
+/* ABOUT */
+.about {
+  background: #111;
+  text-align: center;
+}
+
+/* PRODUCT */
+.product {
+  background: #0d0d0d;
+  text-align: center;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.product-card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  transition: 0.3s;
+  border: 1px solid #c49b08;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 30, 30, 0.3);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.buy-btn {
+  background: #b80000;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buy-btn:hover {
+  background: #ff1e1e;
+}
+
+/* REVIEW */
+.review {
+  background: #141414;
+  text-align: center;
+}
+
+.review-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.review-card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  border: 1px solid #c49b08;
+}
+
+/* Q&A */
+.qa {
+  background: #0e0e0e;
+}
+
+.qa-item {
+  margin-bottom: 20px;
+  border-left: 4px solid #c49b08;
+  padding-left: 15px;
+}
+
+/* KONTAK */
+.kontak {
+  background: #111;
+  text-align: center;
+}
+
+.social-icons a {
+  color: #c49b08;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff1e1e;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  border-top: 1px solid #c49b08;
+}
+
+/* MOBILE BUY BUTTON */
+.mobile-buy {
+  display: none;
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #c49b08;
+  color: black;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(255, 30, 30, 0.5);
+  font-weight: bold;
+}
+
+/* MENU MOBILE */
+.menu-toggle {
+  display: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .mobile-buy {
+    display: block;
+  }
+}
